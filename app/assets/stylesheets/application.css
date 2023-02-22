@@ -1,0 +1,199 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.img{
+  height: 150px;
+  width: 150px;
+  margin-left: 60px;
+  margin-top: -14px;
+}
+.entete{
+  display: flex;
+  justify-content: space-between;
+}
+.republic{
+  margin-right: 60px;
+  margin-top: -3px;
+  font-family: fantasy;
+}
+.rep{
+  margin-bottom: 0px;
+}
+.etat{
+  text-align: center;
+  border: 1px solid black;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+.exam{
+  margin-left: 79px;
+  width: 300px;
+  padding-top: 15px;
+}
+.sess, .serie{
+  width: 300px;
+  margin-left: 41px;
+}
+
+.serie{
+  margin-left: 36px;
+  padding-bottom: 5px;
+}
+.flag{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.note{
+  position: absolute;
+  left: 165px;
+  top: -12px;
+  background: #fff;
+  width: 150px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-top: 2px;
+}
+.infoapp{
+  margin-top: 10px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.dec{
+  width: 500px;
+  margin-left: 15px;
+}
+.infoent{
+    display: inline-block;
+    width: 250px;
+    margin-left: 118px;
+    margin-right: auto;
+    padding: 5px;
+
+}
+.infoentete{
+  background: #94EBF0;
+  border-radius: 5px 5px 0 0;
+}
+.patro{
+  padding-top: 5px;
+}
+.nummat{
+  padding-bottom: 5px;
+}
+.infogro{
+  width: 300px;
+  margin-left: 85px;
+  padding-bottom: 15px;
+}
+.tab{
+  width: 500px;
+  margin-top: 15px;
+}
+.letout{
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 6px;
+  background:linear-gradient(#C9CBD1,#161499);
+  position: relative;
+}
+.letout1{
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 5px;
+  background: #fff;
+  /*background-image: url("assets/logo.png");
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /**filter: contrast(0.3);*/
+  /**opacity: 0.2;*/
+}
+.fill{
+  position: absolute;
+  /*left: 144px;*/
+  left: 56px;
+  top: 360px;
+  height: 600px;
+  width: 600px;
+  background-position: center;
+  opacity: 0.1;
+}
+.ladate{
+  text-align: right;
+  margin-right: 50px;
+}
+.foot{
+  display: flex;
+  justify-content: space-between;
+}
+.promo{
+  margin-left: 223px;
+}
+.decid{
+  margin-left: 30px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.decision{
+  margin-left: 12px;
+}
+.hide{
+  color: #fff !important;
+}
+.middle{
+  text-align: center !important;
+}
+.check{
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+}
+.samoce{
+  font-size: 2px;
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  position: absolute;
+  top: -6px;
+  color: #fff;
+}
+.pren{
+  margin-left: 10px;
+}
+.nom{
+  margin-left: 5px;
+}
+.endbilan{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: underline;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.bilanhide{
+  color: #fff;
+}

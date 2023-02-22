@@ -1,0 +1,204 @@
+<p id="notice"><%= notice %></p>
+<div class="letout">
+    <p class="samoce">samoce</p>
+    <div class="letout1">
+
+          <div class="entete">
+            <%= image_tag("logo.png", class:"img") %>
+            <div class="republic">
+              <%= image_tag("flag.png", class:"flag") %>
+              <p class="rep">République du BENIN</p>
+            </div>
+          </div>
+
+          <%= image_tag("logo.png", class:"fill") %>
+          <div class="etat">
+            <p class="rep note">RELEVE DE NOTES</p>
+            <p class="rep exam">Examen Blanc GROUPE <strong>"DAMAKO"</strong></p>
+            <p class="rep bep"><strong>BREVET D'ETUDES DU PREMIER CYCLE</strong></p>
+            <p class="rep sess"><strong>SESSION</strong> : Février 2023</p>
+            <p class="rep serie"><strong>SERIE</strong> : <%= @user.moderne.capitalize %></p>
+            <p class="rep infogro">N°
+              <% if @user.id-1 < 10 %>
+                0<%= @user.id-1 %>
+              <% else %>
+                <% if @user.id-1 >39 %>
+                  <%= @user.id %>
+                <% else %>
+                  <%= @user.id-1 %>
+                <% end %>
+              <% end %>
+              /LIT/EB/2023/GROUPE DAMAKO</p>
+          </div>
+
+          <div class="infoapp">
+            <div class="infoentete">
+              <strong class="infoent">Informations de l'apprenant</strong>
+            </div>
+            <div class="patro dec">
+              <strong>NOM ET PRENOM(S)</strong> :  <span> <strong class="nom"><%= @user.nom.upcase %></strong> <i class="pren"><%= @user.prenom %></i></span>
+            </div>
+            <div class="center dec">
+              <strong>CENTRE D'EXAMEN</strong> : <i>EPP Fifadji/Groupe A</i>
+            </div>
+            <div class="nummat dec">
+              <strong>N°INSCRIPTION</strong> : <i>EBGD 0</i>
+              <i>
+              <% if @user.id-1 < 10 %>
+                0<%= @user.id-1 %>
+              <% else %>
+                <% if @user.id-1 >39 %>
+                  <%= @user.id %>
+                <% else %>
+                  <%= @user.id-1 %>
+                <% end %>
+              <% end %>
+              </i>
+            </div>
+          </div>
+
+
+    <table class="table table-bordered tab">
+      <thead>
+        <tr>
+          <th scope="col" colspan="2">MATIERE</th>
+          <th scope="col" class="middle">Coefficient</th>
+          <th scope="col">Note sur 20</th>
+          <th scope="col">Note Coefficié</th>
+          <th scope="col" class="hide">ggggggggggggggggggggg</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">LECTURE</td>
+          <td class="middle">2</td>
+          <td class="middle"><%= @user.lecture %></td>
+          <td class="middle"><%= @lect %></td>
+          <td rowspan="5"><strong>TOTAL FRANCAIS:</strong><br><br> <%= @somfr %>
+            <br><br>
+            <strong>TOTAL EPREUVES ECRITES:</strong>
+            <br><br>
+            <%= @total %>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">COMMUNICATION ECRITE</td>
+          <td class="middle">2</td>
+          <td class="middle"><%= @user.commecri %></td>
+          <td class="middle"><%= @com %></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">LANGUE VIVANTE 1</td>
+          <td class="middle">
+            <% if @user.moderne == "moderne court" %>
+              2
+            <% else %>
+              3
+            <% end %>
+          </td>
+          <td class="middle"><%= @user.anglais %></td>
+          <td class="middle"><%=@ang %></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">MATHEMATIQUE</td>
+          <td class="middle">
+            <% if @user.moderne == "moderne court" %>
+              3
+            <% else %>
+              2
+            <% end %>
+          </td>
+          <td class="middle"><%= @user.math %></td>
+          <td class="middle"><%= @math %></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <% if @user.moderne == "moderne long all" %>
+                ALLEMAND
+            <% elsif @user.moderne == "moderne long esp." %>
+                ESPAGNOL
+            <% elsif @user.moderne == "moderne court" %>
+              PHYS.CHIM ET TECHNOLOGIE
+            <% end %>
+
+          </td>
+          <td class="middle">2</td>
+          <td class="middle">
+
+            <% if @user.moderne == "moderne long all" %>
+                <%= @user.allemand %>
+            <% elsif @user.moderne == "moderne long esp." %>
+                <%= @user.esp %>
+            <% elsif @user.moderne == "moderne court" %>
+              <%= @user.pct %>
+            <% end %>
+          </td>
+          <td class="middle">
+
+            <% if @user.moderne == "moderne long all" %>
+                <%= @all %>
+            <% elsif @user.moderne == "moderne long esp." %>
+                <%= @esp %>
+            <% elsif @user.moderne == "moderne court" %>
+              <%= @pct %>
+            <% end %>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">SCIENCE DE VIE ET DE LA TERRE</td>
+          <td class="middle">2</td>
+          <td class="middle"><%= @user.svt %></td>
+          <td class="middle"><%= @svt %></td>
+          <td rowspan="2">
+            <strong> RESULTAT FINAL </strong>
+            <br><br>
+            <strong> TOTAL </strong>: <%= @total %>
+            <br><br>
+            <strong> MOYENNE </strong>: <%= @moyenne %>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">HISTOIRE ET GEOGRAPHIE</td>
+          <td class="middle">2</td>
+          <td class="middle"><%= @user.hisgeo %></td>
+          <td class="middle"><%= @hist %></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="date">
+      <p class="ladate">Cotonou, le <i> <%= @d.strftime("%d/%m/%Y") %> </i></p>
+    </div>
+    <div class="foot">
+      <div class="decid">
+        <p class="rep pdecid">DECISION DU JURY</p>
+        <p class="rep pdecid">
+          <% if @moyenne > 10 %>
+            <strong class="decision"><%= @succes %></strong>
+            <%= image_tag("check.jpg", class:"check") %>
+          <% else %>
+            <strong class="decision"><%= @echec %></strong>
+            <%= image_tag("uncheck1.jpg", class:"check") %>
+          <% end %>
+        </p>
+      </div>
+      <div class="rep prom">
+        <p class=" rep promo"><strong>LE PROMOTEUR<strong></p>
+      </div>
+    </div>
+
+<br>
+  </div>
+</div>
+<br><br><br>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>|
+<%= link_to 'New User', new_user_path %>
+<br><br><br>

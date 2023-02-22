@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  prenom: MyString
+  lecture: 1
+  commecri: 1
+  anglais: 1
+  math: 1
+  pct: 1
+  svt: 1
+  hisgeo: 1
+
+two:
+  nom: MyString
+  prenom: MyString
+  lecture: 1
+  commecri: 1
+  anglais: 1
+  math: 1
+  pct: 1
+  svt: 1
+  hisgeo: 1
